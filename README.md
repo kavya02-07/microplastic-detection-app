@@ -1,51 +1,68 @@
-# Microplastic-detection by using YOLO
+# Clarium — AI-Powered Microplastic Detection and Analysis
 
-## Object detection model 
+Clarium is an AI-powered web application for detecting, classifying, and quantitatively analyzing microplastic particles in aquatic sample images.
 
-This github is contain model after train of paper `A detection and classification of microplastics based on YOLOv8 and YOLO-NAS` . 
+The system uses a YOLOv8-based object detection model to identify four morphological classes of microplastics:
 
-<br />
+- Fibers
+- Films
+- Fragments
+- Pellets
 
-## Using in colab
+Clarium combines AI-based detection with particle-level measurements, analysis history, visualization, model evaluation, authentication, and automated PDF reporting in a full-stack application.
 
-You can use example code for inferance model at `example.ipynb` in this github. <br />
+---
 
-You can acess and our model in this github .
-```
-weights/microplastic-detection-yolo8m.pt
-```
+## Key Features
+
+### AI-Based Detection
+- YOLOv8 Medium object detection model
+- Detection of four microplastic morphological classes
+- Adjustable confidence threshold
+- Bounding-box visualization
+- Particle-level confidence scores
+
+### Quantitative Analysis
+For every detected particle, Clarium calculates:
+
+- Bounding-box width
+- Bounding-box height
+- Bounding-box area
+- Aspect ratio
+- Confidence score
+- Class distribution
 
 
-## Web application. 
-You can acess our example web application in below link. 
-```
-https://microplastic.onrender.com/
-```
+### Analysis History
+- Persistent analysis records
+- User-specific history
+- Detailed historical analysis
+- Stored particle-level detection data
+- No need to rerun the model to view previous analyses
 
-## Run with streamlit in your local computer
-**Step1**
-Clone this repository. 
-```
-git clone https://github.com/arsanchai-su/microplastic-detection-app.git
-```
-**Step2**
-Change working directory 
-```
-cd microplastic-detection-app
-```
-**Step3**
- Install packages with pip. 
-```
-pip install -r requirements.txt
-```
-**Step4**
-Run  streamlit by using command. 
-```
-streamlit run streamlit_app.py 
-```
-**Step5**
-Access you localhost.
-```
-http://localhost:8501/
-```
+### Authentication
+- User registration and login
+- Password hashing using bcrypt
+- JWT-based authentication
+- Protected API routes
+- User-level data isolation
+
+### Reports and Visualization
+Clarium can generate PDF analysis reports containing:
+
+- Morphology composition
+- Class distribution
+- Confidence distribution
+- Particle-area distribution
+- Class-wise particle-area analysis
+- Detection-density visualization
+- Confidence vs. particle-area analysis
+- Model evaluation information
+- Scientific interpretation and limitations
+
+
+---
+
+
+ 
 
