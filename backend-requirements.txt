@@ -1,0 +1,23 @@
+fastapi==0.103.2
+uvicorn==0.23.2
+python-multipart==0.0.6
+pydantic==2.4.2
+sqlalchemy==2.0.21
+passlib[bcrypt]==1.7.4
+PyJWT==2.8.0
+email-validator==2.1.0
+bcrypt==3.2.0
+
+# AI inference, reporting, and analytics runtime dependencies
+# (pinned to the versions in the working environment)
+ultralytics==8.0.145
+torch==1.13.1
+reportlab==5.0.1
+matplotlib==3.5.3
+numpy==1.23.5
+Pillow==9.5.0
+# scipy is only used for scipy.stats.gaussian_kde (stable across releases).
+# The env's installed scipy 1.7.3 pins numpy<1.23, which conflicts with the
+# numpy 1.23.5 that torch/pandas/matplotlib run on, so a fresh install must use
+# a scipy that accepts numpy 1.23.x. 1.9.3 is the minimal compatible pin.
+scipy==1.9.3
